@@ -28,11 +28,11 @@ COPY ${spark_base}/data /opt/spark/data
 
 # Update kubernetes-client (SPARK-28925)
 RUN rm -f /opt/spark/jars/kubernetes-client-*.jar
-ADD https://search.maven.org/remotecontent?filepath=io/fabric8/kubernetes-client/4.4.2/kubernetes-client-4.4.2.jar /opt/spark/jars
+ADD https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/4.4.2/kubernetes-client-4.4.2.jar /opt/spark/jars
 
 # Add aws dependencies
-ADD https://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.7/hadoop-aws-2.7.7.jar /opt/spark/jars
-ADD https://search.maven.org/remotecontent?filepath=com/amazonaws/aws-java-sdk/1.11.699/aws-java-sdk-1.11.699.jar /opt/spark/jars
+ADD https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.7/hadoop-aws-2.7.7.jar /opt/spark/jars
+ADD https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.699/aws-java-sdk-bundle-1.11.699.jar /opt/spark/jars
 
 ENV SPARK_HOME /opt/spark
 
