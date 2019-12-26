@@ -32,6 +32,9 @@ COPY ${spark_base}/examples ${SPARK_HOME}/examples
 COPY ${spark_base}/${k8s_tests} ${SPARK_HOME}/tests
 COPY ${spark_base}/data ${SPARK_HOME}/data
 
+# override entrypoint
+COPY entrypoint.sh /opt/entrypoint.sh
+
 # Update kubernetes-client (SPARK-28925)
 RUN rm -f ${SPARK_HOME}/jars/kubernetes-client-*.jar
 ADD https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/4.4.2/kubernetes-client-4.4.2.jar ${SPARK_HOME}/jars
