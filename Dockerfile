@@ -32,7 +32,7 @@ ADD https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/4.4.2/kubernetes
 
 # Add aws dependencies
 ADD https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.7/hadoop-aws-2.7.7.jar /opt/spark/jars
-ADD https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.699/aws-java-sdk-bundle-1.11.699.jar /opt/spark/jars
+ADD https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar /opt/spark/jars
 
 ENV SPARK_HOME /opt/spark
 
