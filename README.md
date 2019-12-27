@@ -9,3 +9,14 @@ Spark image built with [official instructions](https://spark.apache.org/docs/lat
     Scala 2.12 version of distribution, it doesn't include Hadoop dependencies.
 
 This image addresses these issues.
+
+## How to build
+1.  Download and extract Hadoop binary distribution (*any version above 2.8*)
+    into `build/` directory. Rename it as `hadoop`.
+2.  Download and extract Spark binary distribution (*without pre-packaged
+    Hadoop dependencies*) into `build/` directory. Rename it as `spark`.
+3.  Build Spark image:
+
+    ```sh
+    docker build -t <tag> -f Dockerfile .
+    ```
